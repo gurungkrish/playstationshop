@@ -1,0 +1,460 @@
+.logo {
+    display: flex;
+    gap:10px;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.logo-icon img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.logo-text {
+    font-size: 1.2rem;
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: black;
+    z-index: 1000;
+}
+
+header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar .logo {
+    color: #fff;
+    font-weight: 600;
+    font-size: 2.1rem;
+    text-decoration: none;
+}
+
+.navbar .logo span {
+    color: #C06B3E;
+}
+
+.navbar .menu-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.navbar a:hover {
+    color: #C06B3E;
+}
+
+.top-section {
+    height: 100vh;
+    background-image: url("1.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.top-section .top-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    color: #fff;
+}
+
+.top-section .top-content h2 {
+    font-size: 3rem;
+    max-width: 600px;
+    line-height: 70px;
+}
+
+.top-section .top-content p {
+    font-weight: 300;
+    max-width: 600px;
+    margin-top: 15px;
+}
+
+.video-container {
+    position: relative;
+}
+
+.background-clip {
+    width: 100%;
+    height: auto;
+}
+
+.top-section .top-content button, button {
+    background: #fff;
+    padding: 12px 30px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 6px;
+    margin-top: 38px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.top-section .top-content button:hover {
+    color: #fff;
+    background: #C06B3E;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    header.show-mobile-menu::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(5px);
+    }
+
+    .navbar .logo {
+        font-size: 1.7rem;
+    }
+
+    #hamburger-btn, #close-menu-btn {
+        display: block;
+    }
+
+    .navbar .menu-links {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        padding: 70px 40px 0;
+        transition: left 0.2s ease;
+    }
+
+    header.show-mobile-menu .navbar .menu-links {
+        left: 0;
+    }
+
+    .navbar a {
+        color: #000;
+    }
+
+    .hero-section .content {
+        text-align: center;
+    }
+
+    .hero-section .content :is(h2, p) {
+        max-width: 100%;
+    }
+
+    .hero-section .content h2 {
+        font-size: 2.3rem;
+        line-height: 60px;
+    }
+
+    .hero-section .content button {
+        padding: 9px 18px;
+    }
+}
+
+.shop-header {
+    background-color: black;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.shop-header h2 {
+    color: white;
+}
+
+.shop-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: black;
+    padding: 50px 0;
+    flex-wrap: wrap;
+}
+
+.shop-box .card {
+    display: inline-block;
+    width: 280px;
+    margin: 20px;
+}
+
+.shop-box .card-image {
+    width: 280px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.shop-box .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.shop-box .card-image img:hover {
+    transform: scale(1.1);
+    transition: transform .4s ease-in-out;
+}
+
+.shop-box .card-body {
+    padding: 20px;
+    color: white;
+    border: 3px solid #3B3B3B;
+}
+
+.shop-box .card-body h3 {
+    padding: 10px 0;
+}
+
+.shop-box .card-body i {
+    color: yellow;
+    font-size: 10px;
+    position: relative;
+    bottom: 5px;
+}
+
+.shop-box .card-body .cash {
+    font-size: 22px;
+    margin-left: 90px;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.text-overlay h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.text-overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.text-overlay a {
+    background-color: #C06B3E;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.text-overlay a:hover {
+    background-color: #A4532C;
+}
+
+.contact-container {
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    background-image: url("B7.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container form {
+    font-family: "Roboto", sans-serif;
+    width: 670px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+}
+
+.contact-container form h1 {
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 20px;
+    width: 500px;
+    text-align: center;
+}
+
+.contact-container form input {
+    font-family: "Roboto", sans-serif;
+    width: 290px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom: 2px solid #fff;
+}
+
+.contact-container form input::placeholder {
+    color: #ddd;
+}
+
+.contact-container form #lastName,
+.contact-container form #mobile {
+    margin-left: 20px;
+}
+
+.contact-container form h4 {
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    font-weight: 300;
+    width: 600px;
+    margin-top: 20px;
+}
+
+.contact-container form textarea {
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 80px;
+    max-height: 80px;
+}
+
+textarea::-webkit-scrollbar {
+    width: 1em;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: rgba(194, 194, 194, 0.713);
+}
+
+.contact-container form #button {
+    border: none;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #333;
+    width: 100px;
+    padding: 0;
+    margin-right: 500px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.contact-container form #button:hover {
+    opacity: 0.7;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    padding: 7vh 0;
+}
+
+.footer-col {
+    padding-left: 20PX;
+    width: 25%;
+    padding: 0 1.5vw;
+}
+
+.footer-col h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 2vh;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    background-color: black;
+    height: 0.1rem;
+    box-sizing: border-box;
+    width: 3rem;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 1vh;
+}
+
+.footer-col ul li a {
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 0.5rem;
+}
+
+.container {
+    max-width: 90vw;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
